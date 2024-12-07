@@ -6,9 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  optimizeDeps: {
-    include: ['bootstrap/dist/css/bootstrap.min.css'],
-  },
+
   plugins: [
     vue(),
     vueDevTools(),
