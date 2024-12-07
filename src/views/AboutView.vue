@@ -13,7 +13,7 @@ const {id}=router.params
 onMounted(async()=>{
   try {
     loading.value=true
-    const response = await fetch(`http://www.omdbapi.com/?i=${id}&page=1&apikey=18029196`)
+    const response = await fetch(`https://www.omdbapi.com/?i=${id}&page=1&apikey=18029196`)
     const data = await response.json()
     movie.value=data
     loading.value=false

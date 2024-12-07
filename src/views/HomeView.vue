@@ -31,7 +31,7 @@ const fetchMovies = async () => {
   try {
     loading.value = true;
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${searchParams.value.title}&y=${searchParams.value.year}&t=${searchParams.value.genre}&page=${page.value}&apikey=18029196`
+      `https://www.omdbapi.com/?s=${searchParams.value.title}&y=${searchParams.value.year}&t=${searchParams.value.genre}&page=${page.value}&apikey=18029196`
     );
     const data = await response.json();
     Movies.value = data.Search || [];
