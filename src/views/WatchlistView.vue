@@ -15,7 +15,7 @@ const fetchMovies = async () => {
   try {
     loading.value = true;
     const response = await fetch(
-      `/api/?s=batman&y=2022&t=movie&page=${page.value}&apikey=18029196`
+      `http://www.omdbapi.com/?s=batman&y=2022&t=movie&page=${page.value}&apikey=18029196`
     );
     const data = await response.json();
     Movies.value = data.Search || [];
