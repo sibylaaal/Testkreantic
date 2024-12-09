@@ -41,7 +41,7 @@ const addToWatchList = (movie) => {
           <span>4.5</span>
         </div>
 
-        <!-- Add to Watchlist Button -->
+       
         <button
           @click="addToWatchList(data)"
           :disabled="isInWatchList(data.imdbID)"
@@ -54,7 +54,6 @@ const addToWatchList = (movie) => {
           {{ isInWatchList(data.imdbID) ? 'Already in Watchlist' : 'Add to Watchlist' }}
         </button>
 
-        <!-- Go Somewhere Button -->
         <RouterLink :to="`/${data.imdbID}`" class="btn" style="color: #1ac659;">
           Go somewhere
         </RouterLink>

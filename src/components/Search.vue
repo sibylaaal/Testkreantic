@@ -1,19 +1,18 @@
 <script setup>
 import { ref } from 'vue';
 
-// Input values
+
 const title = ref('');
 const year = ref(2022);
 const genre = ref('movie');
 
-// Validation errors
 const titleError = ref('');
 const yearError = ref('');
 const emit = defineEmits(['search', 'filter']);
 
-// Search form submission
+
 const ApplySearch = () => {
-  titleError.value = ''; // Reset error
+  titleError.value = ''; 
   if (!title.value.trim()) {
     titleError.value = 'Title is required.';
     return;
@@ -21,9 +20,9 @@ const ApplySearch = () => {
   emit('search', { title: title.value });
 };
 
-// Filter form submission
+
 const ApplyFilter = () => {
-  yearError.value = ''; // Reset error
+  yearError.value = ''; 
 
   if (year.value < 1900 || year.value > 2025) {
     yearError.value = 'Year must be between 1900 and 2025.';
@@ -39,7 +38,7 @@ const ApplyFilter = () => {
 
 <template>
   <div>
-    <!-- Title Search -->
+    
     <form @submit.prevent="ApplySearch" class="mt-4">
       <div class="form-group border p-2">
         <label for="titleInput">Title</label>

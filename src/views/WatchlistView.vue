@@ -8,7 +8,6 @@ const Movies = ref([]);
 const page = ref(1);
 const loading = ref(false);
 
-// Pinia store for watch list management
 const watchListStore = useWatchListStore();
 
 const fetchMovies = async () => {
@@ -41,7 +40,6 @@ onMounted(fetchMovies);
       <!-- If the watch list is empty, display the Empty component -->
       <Empty message="no movie founded" />
     </div>
-
     <div v-else class="row p-2">
       <!-- Display watch list as boxes -->
       <div
@@ -50,6 +48,8 @@ onMounted(fetchMovies);
         class="col-md-3 mb-4"
         style="width: 18rem;"
       >
+
+      
         <div class="card">
           <img :src="movie.Poster" class="card-img-top" alt="movie poster" />
           <div class="card-body">

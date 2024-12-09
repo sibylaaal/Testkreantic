@@ -47,10 +47,11 @@ const addToWatchList = (movie) => {
   <div class="container align-items-center  mt-5">
     <RouterLink to="/">
       <i  style="background-color:#1ac659 ;"  class="pi pi-arrow-left text-light mb-2 mt-2 p-2 rounded"></i></RouterLink>
-    <div class="row">
-      <div v-if="loading" class="py-5">
+    <div v-if="loading" class="py-5">
             <Skeleton />
-          </div>
+          </div> 
+          <div v-if="!loading" class="row">
+     
         <div class="col-md-6">
             <h2 class="mb-3">{{ movie.Title }}</h2>
             <div class="d-flex align-item-center justify-centent-center">
